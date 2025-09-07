@@ -6,7 +6,6 @@ The app supports product listing, user registration, and database connectivity f
 ## Project Structure
 
 reactapp/
-│
 ├── src/                  # React frontend source code
 │   ├── App.jsx
 │   ├── components/       # Reusable React components
