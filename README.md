@@ -56,7 +56,6 @@ A full-stack e-commerce web application built using React, Vite, Express, MongoD
     cd ../backend
     npm install
 
-
 4.Start Backend
 ```bash
     cd backend
@@ -68,9 +67,6 @@ A full-stack e-commerce web application built using React, Vite, Express, MongoD
     npm run dev
 
 6.Environment Variables
-
-**Create a .env file in the root folder and add:**
-
 ```bash
     MONGO_URI=your_mongodb_connection_string
     CLOUDINARY_CLOUD_NAME=your_cloud_name
