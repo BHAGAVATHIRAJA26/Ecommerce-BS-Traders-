@@ -83,20 +83,20 @@ To set up the project locally, follow these steps:
 ### Folder Structure
 
 
-bstraders/
-└── e-commerce/
-    ├── backend/
-    │   ├── api/
-    │   ├── config/
-    │   ├── middleware/
-    │   └── models/
+/bstraders
+└── /e-commerce
+    ├── /backend
+    │   ├── /api
+    │   ├── /config
+    │   ├── /middleware
+    │   └── /models
     │
-    ├── client/
-    │   ├── src/
-    │   ├── index.html
-    │   └── vite.config.js
+    ├── /client
+    │   ├── /src
+    │   ├── /index.html
+    │   └── /vite.config.js
     │
-    ├── package.json
-    ├── vercel.json
-    └── .env
+    ├── /package.json
+    ├── /vercel.json
+    └── /.env
 
