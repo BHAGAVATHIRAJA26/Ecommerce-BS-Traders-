@@ -39,6 +39,61 @@ A full-stack e-commerce web application built using React, Vite, Express, MongoD
 
 ---
 
+### 📥 Installation
+
+1. Clone the Repository
+    ```bash
+    git clone https://github.com/BHAGAVATHIRAJA26/BS-Traders-Ecommerce-.git
+    cd BS-Traders-Ecommerce-
+
+2. Install Frontend Dependencies
+   ```bash
+    cd client
+    npm install
+
+3. Install Backend Dependencies
+   ```bash
+    cd ../backend
+    npm install
+
+
+4.Start Backend
+```bash
+    cd backend
+    npm start
+
+5.Start Frontend
+```bash
+    cd client
+    npm run dev
+
+6.Environment Variables
+
+**Create a .env file in the root folder and add:**
+
+```bash
+    MONGO_URI=your_mongodb_connection_string
+    CLOUDINARY_CLOUD_NAME=your_cloud_name
+    CLOUDINARY_API_KEY=your_api_key
+    CLOUDINARY_API_SECRET=your_api_secret
+    RAZORPAY_KEY_ID=your_razorpay_key
+    RAZORPAY_KEY_SECRET=your_razorpay_secret
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Folder Structure
 
 
@@ -59,33 +114,3 @@ bstraders/
     ├── vercel.json
     └── .env
 
-
----
-### 📥 Installation
-
-Clone the Repository
-git clone https://github.com/BHAGAVATHIRAJA26/BS-Traders-Ecommerce-.git
-cd BS-Traders-Ecommerce-
-Install Frontend Dependencies
-cd client
-npm install
-Install Backend Dependencies
-cd ../backend
-npm install
-Run Project Locally
-Start Backend
-cd backend
-npm start
-Start Frontend
-cd client
-npm run dev
-Environment Variables
-
-Create a .env file in the root folder and add:
-
-MONGO_URI=your_mongodb_connection_string
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
-RAZORPAY_KEY_ID=your_razorpay_key
-RAZORPAY_KEY_SECRET=your_razorpay_secret
