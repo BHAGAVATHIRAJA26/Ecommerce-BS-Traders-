@@ -1,34 +1,34 @@
-# BS Traders E-Commerce
+# 🛒 BS Traders E-Commerce
 
 A full-stack e-commerce web application built using React, Vite, Express, MongoDB, Razorpay, and Cloudinary.
 
 ---
 
-## Features
+## ✨ Features
 
-- User Registration and Login
-- Product Listing
-- Product Details Page
-- Sell / Add Product Feature
-- Image Upload using Cloudinary
-- Online Payment Integration using Razorpay
-- Responsive UI
-- Backend API using Express
-- MongoDB Database Integration
-- Vercel Deployment Support
+- 👤 User Registration and Login
+- 🛍️ Product Listing
+- 📄 Product Details Page
+- ➕ Sell / Add Product Feature
+- 🖼️ Image Upload using Cloudinary
+- 💳 Online Payment Integration using Razorpay
+- 📱 Responsive UI
+- 🔗 Backend API using Express
+- 🗄️ MongoDB Database Integration
+- 🚀 Vercel Deployment Support
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-### Frontend
+### 🎨 Frontend
 - React
 - Vite
 - CSS
 - Axios
 - React Router DOM
 
-### Backend
+### ⚙️ Backend
 - Node.js
 - Express.js
 - MongoDB
@@ -39,9 +39,9 @@ A full-stack e-commerce web application built using React, Vite, Express, MongoD
 
 ---
 
-## Folder Structure
+### Folder Structure
 
-```bash
+
 bstraders/
 └── e-commerce/
     ├── backend/
@@ -60,7 +60,9 @@ bstraders/
     └── .env
 
 
-Installation
+---
+### 📥 Installation
+
 Clone the Repository
 git clone https://github.com/BHAGAVATHIRAJA26/BS-Traders-Ecommerce-.git
 cd BS-Traders-Ecommerce-
