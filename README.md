@@ -57,38 +57,23 @@ A full-stack e-commerce web application built using React, Vite, Express, MongoD
     npm install
 
 4.Start Backend
-```bash
+    ```bash
     cd backend
     npm start
 
 5.Start Frontend
-```bash
+    ```bash
     cd client
     npm run dev
 
 6.Environment Variables
-```bash
+    ```bash
     MONGO_URI=your_mongodb_connection_string
     CLOUDINARY_CLOUD_NAME=your_cloud_name
     CLOUDINARY_API_KEY=your_api_key
     CLOUDINARY_API_SECRET=your_api_secret
     RAZORPAY_KEY_ID=your_razorpay_key
     RAZORPAY_KEY_SECRET=your_razorpay_secret
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Folder Structure
 
