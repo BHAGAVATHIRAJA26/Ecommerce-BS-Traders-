@@ -1,12 +1,60 @@
-# React + Vite
+# BS Traders E-Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack e-commerce web application built using React, Vite, Express, MongoDB, Razorpay, and Cloudinary.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- User Registration and Login
+- Product Listing
+- Product Details Page
+- Sell / Add Product Feature
+- Image Upload using Cloudinary
+- Online Payment Integration using Razorpay
+- Responsive UI
+- Backend API using Express
+- MongoDB Database Integration
+- Vercel Deployment Support
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+### Frontend
+- React
+- Vite
+- CSS
+- Axios
+- React Router DOM
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Multer
+- Cloudinary
+- Razorpay
+
+---
+
+## Folder Structure
+
+```bash
+bstraders/
+└── e-commerce/
+    ├── backend/
+    │   ├── api/
+    │   ├── config/
+    │   ├── middleware/
+    │   └── models/
+    │
+    ├── client/
+    │   ├── src/
+    │   ├── index.html
+    │   └── vite.config.js
+    │
+    ├── package.json
+    ├── vercel.json
+    └── .env
