@@ -38,33 +38,33 @@ A full-stack e-commerce web application built using React, Vite, Express, MongoD
 - Razorpay
 
 ---
-
 ### 📥 Installation
 
-1. Clone the Repository
-    ```bash
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
     git clone https://github.com/BHAGAVATHIRAJA26/BS-Traders-Ecommerce-.git
     cd BS-Traders-Ecommerce-
 
 2. Install Frontend Dependencies
    ```bash
-    cd client
-    npm install
+   cd client
+   npm install
 
-3. Install Backend Dependencies
-```bash
-cd ../backend
-npm install
+3. Install Backend Dependencies:
+   ```bash
+   cd ../backend
+   npm install
 
-4.Start Backend
-```bash
-cd backend
-npm start
+4. Start Backend
+   ```bash
+   cd backend
+   npm start
 
-5.Start Frontend
-```bash
-cd client
-npm run dev
+5. start the frontend:
+   ```bash
+   npm run dev
 
 6.Environment Variables
     ```bash
