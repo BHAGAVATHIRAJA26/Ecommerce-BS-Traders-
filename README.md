@@ -66,8 +66,20 @@ To set up the project locally, follow these steps:
    ```bash
    npm run dev
 
-### Folder Structure
-
+### 🗂️ Project Structure
+     
+      /e-commerce
+      │
+      ├── /client              # React Frontend
+      │   ├── /src               
+      │   ├── /index.html           
+      │   └── vite.config.js             
+      │
+      └── /backend               # Backend
+          ├── /api            
+          ├── /config
+          ├── /middleware
+          └──  models            
 
 /bstraders
 └── /e-commerce
