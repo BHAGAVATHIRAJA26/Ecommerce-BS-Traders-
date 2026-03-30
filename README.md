@@ -81,20 +81,3 @@ To set up the project locally, follow these steps:
           ├── /middleware
           └──  models            
 
-/bstraders
-└── /e-commerce
-    ├── /backend
-    │   ├── /api
-    │   ├── /config
-    │   ├── /middleware
-    │   └── /models
-    │
-    ├── /client
-    │   ├── /src
-    │   ├── /index.html
-    │   └── /vite.config.js
-    │
-    ├── /package.json
-    ├── /vercel.json
-    └── /.env
-
