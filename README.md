@@ -66,6 +66,20 @@ To set up the project locally, follow these steps:
    ```bash
    npm run dev
 
+
+### 🗂️ Project Structure
+     
+      /MoneyMind
+      │
+      ├── /frontend              # React Frontend
+      │   ├── /src               # Main source files
+      │   ├── /assets            # Images & static files
+      │   └── public             # Public files
+      │
+      └── /backend               # Flask Backend
+          ├── /app.py            # Main backend file
+          ├── /database          # Database configuration
+          └──  models            # Data models
 ### Folder Structure
 
 
