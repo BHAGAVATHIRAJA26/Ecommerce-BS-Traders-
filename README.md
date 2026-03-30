@@ -52,19 +52,19 @@ A full-stack e-commerce web application built using React, Vite, Express, MongoD
     npm install
 
 3. Install Backend Dependencies
-   ```bash
-    cd ../backend
-    npm install
+```bash
+cd ../backend
+npm install
 
 4.Start Backend
-    ```bash
-    cd backend
-    npm start
+```bash
+cd backend
+npm start
 
 5.Start Frontend
-    ```bash
-    cd client
-    npm run dev
+```bash
+cd client
+npm run dev
 
 6.Environment Variables
     ```bash
