@@ -4,7 +4,6 @@ import './index.css'
 import App from './App.jsx' 
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import Reg from './Newreg.jsx'
-import Ecom from './Ecom.jsx'
 import Conn from './Conn.jsx'  
 
 import Det from './Detail.jsx'
@@ -21,11 +20,11 @@ const router=createBrowserRouter([
     </GoogleOAuthProvider>
   },
   {
-    path:'/detail/:id',
+    path:'/detail/:did/:id',
     element:<Det></Det>
   },
   {
-    path:'/Sell',
+    path:'/:id/Sell',
     element:<Sell></Sell>
   },
   {
@@ -33,11 +32,11 @@ const router=createBrowserRouter([
     element:<Reg></Reg>
   },
   {
-    path:'/product',
+    path:'/:id/product',
     element:<Conn></Conn>
   },
   {
-    path:'/Card',
+    path:'/:id/Card',
     element:<Card></Card>
   }
 ]);

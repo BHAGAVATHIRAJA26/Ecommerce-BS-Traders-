@@ -1,5 +1,6 @@
 import myImage from './myimage.jpg';
 import './App.css'
+import { useParams } from "react-router-dom";
 import bi from './bicycle.jpg';
 import wa from './watch.jpg';
 import sp from './sp.jpg';
@@ -7,40 +8,17 @@ import ta from './ta.jpg';
 import er from './er.jpg';
 import wt from './wt.jpg';
 import axios from "axios";
-
 import { useNavigate } from 'react-router-dom';
-
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Link } from 'react-router-dom';
-
-
-
-
-
-
-
-
-
 import React from 'react'
-import Ecom from './Ecom.jsx'
 import { useEffect,useState} from 'react'
 
 function Conn(){
-
-
-
-
-
-
-
-
-
-
-
-
+    const[mii,setmii]=useState();
     const [a,setA]=useState([]);
     const navigate=useNavigate();
-
+    const { id } = useParams();
     const [se,setse]=useState(0);
     function fds(event){
         setse(event.target.value);
@@ -58,13 +36,35 @@ function Conn(){
     }
 
 
+
+
+
+
+
+        function inp(did){
+          console.log("poid"+did)
+             navigate(`/detail/${did}/${id}`); 
+    
+        }
+        
     function s1(){
-  
-    navigate('/Sell');
+                                      
+    navigate(`/${id}/Sell`);
     }
-    function c1(){
-      navigate('/Card');
+
+
+    function c1(url,desc,cos,dis){
+      
+      axios.post("http://localhost:3500/itdata",{id,url,desc,cos,dis})
+      .then((response)=>{
+        console.log(response.data.message)
+      });
+
+    
+      
     }
+
+
     useEffect(()=>{
       axios.get("http://localhost:3500/product")
         .then((response)=>{
@@ -72,7 +72,16 @@ function Conn(){
         })
         .catch(error=>console.error(error));
     },[]);
-    //<h1>{a.map(product=>( <Ecom key={product.id} details={product.details}/>))}</h1>
+    useEffect(()=>{
+      axios.post("http://localhost:3500/perinf",id,{
+           
+  headers: { "Content-Type": "text/plain" }})
+      .then((response)=>{
+        setmii(response.data);
+        console.log(response.data)
+      })
+      .catch(error=>console.error(error));
+    },[id]);
     return(<>
 
     <div id='a3'>
@@ -86,43 +95,79 @@ function Conn(){
                         </div>
                         <div>
                               <div id='a7' className='btn  btn-lg btn-light' data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i className="bi bi-person-circle"></i>Profile</div>
-                          <Link to="/Sell"><div id='a7' className='btn  btn-lg btn-light'> <i className="bi bi-shop" onClick={s1}></i> Sell</div></Link>
+                          <Link to={`/${id}/Sell`}><div id='a7' className='btn  btn-lg btn-light'> <i className="bi bi-shop" onClick={s1}></i> Sell</div></Link>
 
-                          <Link to="/Card"><div id='a8' className='btn  btn-lg btn-light'><i class="bi bi-cart" onClick={c1}></i>Add To Cart</div></Link>
+                          <Link to={`/${id}/Card`}><div id='a8' className='btn  btn-lg btn-light'><i className="bi bi-cart" onClick={c1}></i>Add To Cart</div></Link>
                         </div>
 
 
-<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><i className="bi bi-person-circle"></i>Profile</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div className="offcanvas offcanvas-end" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div className="offcanvas-header">
+    <h1 className="offcanvas-title" id="offcanvasWithBothOptionsLabel"><i className="bi bi-person-circle"></i>Profile</h1>
+    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     
   </div>
-  <div class="offcanvas-body">
-    <h6 style={{ marginTop: "20px" }}><i class="bi bi-envelope"> EMAIL:</i> bhagavathi</h6>
-  
-    <h6  style={{ marginTop: "20px" }}><i class="bi bi-telephone-fill">PHONE:</i> 9443278330</h6>
-  
-    <h6 style={{ marginTop: "20px" }}><i class="bi bi-telephone-fill">ANOTHER-PHONE :</i> 9443278330</h6>
-    
-    <h6 style={{ marginTop: "20px" }}><i class="bi bi-house-door-fill">ADDRESS:</i> Kaveri Nagar East Garden</h6>
-    
-    <h6 style={{ marginTop: "20px" }}>CITY :Oddanchatram</h6>
-    
-    <h6 style={{ marginTop: "20px" }}>DISTRICT: Dindigul</h6>
-  
-    <h6 style={{ marginTop: "20px" }}>STATE: Tamil Nadu</h6>
-    
-    <h6 style={{ marginTop: "20px" }}>COUNTRY: Indian</h6>
+  {mii &&
+  <div className="offcanvas-body">
+    <h2 >{mii.username}</h2>
+   <div  id="abcd" style={{ marginTop: "20px", padding: "12px 18px", borderRadius: "10px", background: "linear-gradient(135deg, #f8f9fa, #e9ecef)", boxShadow: "0 4px 10px rgba(0,0,0,0.08)", maxWidth: "420px" }}>
+  <div style={{ fontWeight: "600", fontSize: "13px", color: "#495057", marginBottom: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
+    <i className="bi bi-envelope-fill" style={{ color: "#0d6efd" }}></i>
+    EMAIL
+  </div>
+  <div style={{ fontSize: "15px", fontWeight: "500", color: "#212529", wordBreak: "break-word" }}>
+    {mii.useremail}
   </div>
 </div>
-        
 
+<div id="abcd" style={{ marginTop: "16px", padding: "12px 18px", borderRadius: "10px", background: "linear-gradient(135deg, #f8f9fa, #e9ecef)", boxShadow: "0 4px 10px rgba(0,0,0,0.08)", maxWidth: "420px" }}>
+  <div style={{ fontWeight: "600", fontSize: "13px", color: "#495057", marginBottom: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
+    <i className="bi bi-gender-ambiguous" style={{ color: "#0d6efd" }}></i>
+    GENDER
+  </div>
+  <div style={{ fontSize: "15px", fontWeight: "500", color: "#212529" }}>
+    {mii.gender}
+  </div>
+</div>
+
+<div id="abcd" style={{ marginTop: "16px", padding: "12px 18px", borderRadius: "10px", background: "linear-gradient(135deg, #f8f9fa, #e9ecef)", boxShadow: "0 4px 10px rgba(0,0,0,0.08)", maxWidth: "420px" }}>
+  <div style={{ fontWeight: "600", fontSize: "13px", color: "#495057", marginBottom: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
+    <i className="bi bi-telephone-fill" style={{ color: "#0d6efd" }}></i>
+    PHONE
+  </div>
+  <div style={{ fontSize: "15px", fontWeight: "500", color: "#212529" }}>
+    {mii.phone}
+  </div>
+</div>
+
+<div id="abcd" style={{ marginTop: "16px", padding: "12px 18px", borderRadius: "10px", background: "linear-gradient(135deg, #f8f9fa, #e9ecef)", boxShadow: "0 4px 10px rgba(0,0,0,0.08)", maxWidth: "420px" }}>
+  <div style={{ fontWeight: "600", fontSize: "13px", color: "#495057", marginBottom: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
+    <i className="bi bi-telephone-plus-fill" style={{ color: "#0d6efd" }}></i>
+    ANOTHER PHONE
+  </div>
+  <div style={{ fontSize: "15px", fontWeight: "500", color: "#212529" }}>
+    {mii.aphone}
+  </div>
+</div>
+
+<div id="abcd" style={{ marginTop: "16px", padding: "12px 18px", borderRadius: "10px", background: "linear-gradient(135deg, #f8f9fa, #e9ecef)", boxShadow: "0 4px 10px rgba(0,0,0,0.08)", maxWidth: "420px" }}>
+  <div style={{ fontWeight: "600", fontSize: "13px", color: "#495057", marginBottom: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
+    <i className="bi bi-house-door-fill" style={{ color: "#0d6efd" }}></i>
+    ADDRESS
+  </div>
+  <div style={{ fontSize: "15px", fontWeight: "500", color: "#212529", wordBreak: "break-word" }}>
+    {mii.address}
+  </div>
+</div>
+
+    
+  </div> }
+</div>
                     </div>
                     <div id="u1">
                     </div>
                     <div id="hie">
-                       <center><h1><b>Best Deals, Best Prices!</b></h1></center>
+                       <center><h1 id="bi"><b>Best Deals, Best Prices!</b></h1></center>
                        <br></br>
                        <br></br>
                       <div id="sr">
@@ -133,9 +178,6 @@ function Conn(){
                           <img id="yty" src={er} alt="logo" height="280px" width="370px"></img>
                           <img id="yty" src={wt} alt="logo" height="280px" width="370px"></img>
                       </div>
-
-
-
                     </div>
                     
                   <div style={{marginTop:"100px"}}></div>
@@ -143,8 +185,23 @@ function Conn(){
                     <form id='b1' >
                     
                          
-                          {a.map(products=>( <Ecom key={products._id} id={products._id} detail={products.desc} urimg={products.url} cos={products.cos} dis={products.dis}/>))}
-                
+                          {a.map(item => (
+  <b key={item._id} id="b2"  style={{marginTop:"40px"}}>
+    <div id="b9" onClick={() => inp(item._id)}>
+      <img src={item.url} alt="logo" height="280px" width="370px" />
+    </div>
+
+    <h6>{item.desc}</h6>
+    <h6>Rating: ⭐⭐⭐⭐☆</h6>
+    <b>
+      ₹{item.cos - (item.cos * item.dis / 100)}
+      <span style={{paddingLeft:"10px"}}>MRP:</span><s> ₹{item.cos}</s>
+      <span style={{paddingLeft:"10px"}}>discount:</span><span style={{color:"red"}}>{item.dis}% off</span>
+    </b>
+     <div id='b7' className='btn  btn-lg btn-dark btn-light' onClick={() => c1(item.url,item.desc,item.cos,item.dis)}> 🛒 Add to Card</div>
+  </b>
+))}
+
                     </form>
             </div>
 

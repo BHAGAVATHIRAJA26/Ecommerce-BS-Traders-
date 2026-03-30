@@ -60,7 +60,7 @@
   height: 50px;
   margin-top: 28px;
   margin-left: 130px;
-  padding-left: 30px;
+  padding-left: 20px;
 
 }
 #awe{
@@ -107,7 +107,8 @@
 }
 #b7{
   margin-top: 20px;
-  margin-left: 125px;
+  margin-left: 120px;
+
 }
 #b9{
   padding-top: 1px;
@@ -163,7 +164,7 @@
   }
 
   #content {
-    max-height: 800px;
+    max-height: 900px;
     width: 30%; 
     padding: 20px; 
     background-color: aliceblue;
@@ -199,4 +200,34 @@
 }
 #chk{
   padding-top: 80px;
+}
+button {
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+#bi{
+  transition: transform 0.3s ease;
+}
+
+#bi:hover {
+  transform: scale(1.1);
+}
+
+#b2,#abcd,#b7,#a8 {
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backface-visibility: hidden;
+   
+}
+
+#abcd:hover,#b2:hover,#b7:hover,#a8:hover{
+    transform: scale(1.05);
+    box-shadow:
+        0 0 15px rgba(0, 191, 255, 0.8),   /* Sky Blue */
+        0 0 25px rgba(138, 43, 226, 0.6),  /* Purple */
+        0 0 35px rgba(0, 255, 127, 0.5);   /* Green */
+    border-color: rgb(0, 191, 255);
 }
