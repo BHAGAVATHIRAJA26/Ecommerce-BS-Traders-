@@ -231,3 +231,339 @@ button:hover {
         0 0 35px rgba(0, 255, 127, 0.5);   /* Green */
     border-color: rgb(0, 191, 255);
 }
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* ---------- Tablet (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+  #f1 {
+    padding-left: 200px;
+  }
+
+  #a2 {
+    width: 100%;
+    font-size: xx-large;
+    height: 100px;
+  }
+
+  #b3 {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #b2 {
+    width: 45%;
+    margin-left: 20px;
+  }
+
+  #ui1 {
+    margin-left: 40px;
+    padding-left: 40px;
+  }
+
+  #la {
+    padding-left: 200px;
+  }
+
+  #a8 {
+    margin-left: 60px;
+  }
+
+  #awe {
+    margin-left: 50px;
+  }
+
+  #container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #content {
+    width: 90%;
+  }
+
+  #ratings {
+    width: 95%;
+  }
+
+  #ratings .rating {
+    flex: 1 1 100%;
+  }
+}
+
+/* ---------- Small Tablet (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+  #f1 {
+    padding-left: 50px;
+    margin-top: 60px;
+    height: auto;
+  }
+
+  #c1 {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #c2 {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #a2 {
+    font-size: x-large;
+    height: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  #a4 {
+    margin-left: 15px;
+    margin-top: 20px;
+    font-size: small;
+  }
+
+  #a7 {
+    margin-left: 30px;
+    margin-top: 15px;
+  }
+
+  #a8 {
+    margin-left: 30px;
+    margin-top: 15px;
+  }
+
+  #awe {
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+
+  #b1 {
+    justify-content: center;
+  }
+
+  #b2 {
+    width: 85%;
+    margin-left: 0;
+  }
+
+  #b3 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
+  }
+
+  #b7 {
+    margin-left: 40px;
+  }
+
+  #u2 {
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+
+  #ui1 {
+    margin-left: 20px;
+    padding-left: 20px;
+    font-size: medium;
+  }
+
+  #la {
+    padding-left: 50px;
+    margin-top: -100px;
+  }
+
+  #sr {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  #a9 {
+    margin-top: 150px;
+    height: 180px;
+  }
+
+  #hie {
+    margin-top: 120px;
+  }
+
+  #oo {
+    margin-top: 120px;
+  }
+
+  #r4 {
+    padding-top: 150px;
+  }
+}
+
+/* ---------- Mobile (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  #f1 {
+    padding-left: 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #c1 {
+    width: 95%;
+    margin-left: 0;
+  }
+
+  #c2 {
+    width: 95%;
+    margin-left: 0;
+  }
+
+  #a2 {
+    font-size: large;
+    height: auto;
+    min-height: 60px;
+    padding: 10px 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  #a3 {
+    width: 100vw;
+  }
+
+  #a4 {
+    margin-left: 8px;
+    margin-top: 10px;
+    font-size: x-small;
+    height: 28px;
+  }
+
+  #a7 {
+    margin-left: 10px;
+    margin-top: 8px;
+    height: 35px;
+  }
+
+  #a8 {
+    margin-left: 10px;
+    margin-top: 8px;
+    height: 35px;
+  }
+
+  #awe {
+    margin-left: 10px;
+    margin-top: 8px;
+    height: 35px;
+    padding-left: 10px;
+  }
+
+  #b1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #b2 {
+    width: 95%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  #b3 {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    flex-direction: column;
+    height: auto;
+  }
+
+  #b7 {
+    margin-left: 20px;
+  }
+
+  #b9 {
+    padding-left: 5px;
+  }
+
+  #u {
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+
+  #u2 {
+    margin-left: 10px;
+    margin-top: 80px;
+  }
+
+  #ui1 {
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: small;
+  }
+
+  #la {
+    padding-left: 10px;
+    margin-top: -50px;
+  }
+
+  #sr {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #a9 {
+    margin-top: 100px;
+    height: 150px;
+  }
+
+  #hie {
+    margin-top: 80px;
+  }
+
+  #oo {
+    margin-top: 80px;
+  }
+
+  #r4 {
+    padding-top: 100px;
+  }
+
+  #chk {
+    padding-top: 50px;
+  }
+
+  #ratings {
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  #ratings .rating {
+    flex: 1 1 100%;
+    min-height: 200px;
+  }
+
+  #content {
+    width: 95%;
+    max-height: none;
+  }
+
+  #container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #aw {
+    height: auto;
+    min-height: 100vh;
+  }
+}
