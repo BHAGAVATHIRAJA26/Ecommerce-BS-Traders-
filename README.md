@@ -49,18 +49,17 @@ To set up the project locally, follow these steps:
 
 2. Install Frontend Dependencies
    ```bash
-   cd client
+   cd src
    npm install
 
 3. Install Backend Dependencies:
    ```bash
-   cd ../backend
+   cd ../server
    npm install
 
 4. Start Backend
    ```bash
-   cd backend
-   npm start
+   node login.js
 
 5. start the frontend:
    ```bash
@@ -75,7 +74,7 @@ To set up the project locally, follow these steps:
       │   ├── /index.html           
       │   └── vite.config.js             
       │
-      └── /backend               # Backend
+      └── /server              # Backend
           ├── /api            
           ├── /config
           ├── /middleware
